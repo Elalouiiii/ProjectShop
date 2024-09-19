@@ -1,0 +1,422 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/***********************header******************************************/
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   box-shadow: -1px -1px 3px -2px black;
+   padding: 16px;
+   width: 95%;
+
+
+}
+
+.nav-logo {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   margin-left: 5%;
+}
+
+.nav-logo img {
+   width: 65px;
+   width: 85px;
+
+}
+
+.nav-menu {
+   display: flex;
+   align-items: center;
+   list-style: none;
+   gap: 50px;
+   color: #626262;
+   font-size: 20px;
+   font-weight: 500;
+
+}
+
+.link {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   cursor: pointer;
+   color: black;
+   gap: 3px;
+   text-decoration: none;
+}
+
+.nav-menu hr {
+   border: none;
+   width: 80%;
+   height: 3px;
+   border-radius: 10px;
+   color: #FF4141;
+}
+
+.nav-login-cart Button {
+   margin-left: 8px;
+   border-radius: 15px;
+}
+
+.nav-login-cart img {
+   width: 25px;
+   height: 25px;
+   margin-left: 15px;
+}
+
+.navbar-text {
+   position: relative;
+   cursor: pointer;
+}
+
+span.badge {
+   position: absolute;
+   top: 0;
+   right: -8px;
+   background: red;
+   font-size: 10px;
+}
+
+
+/***********************************main*****************************************/
+.titre {
+   margin-left: 5px;
+   font-size: 55px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color: white;
+}
+
+.conetue {
+   position: absolute;
+   margin-top: 14%;
+}
+
+.carousel {
+   background-image: url('https://img.freepik.com/photos-gratuite/jolie-petite-fille-sacs-provisions-fond-jaune_1157-27836.jpg?w=740&t=st=1722550159~exp=1722550759~hmac=c5b4efaff1aac9e1386d90be18d6dd167fbd1b24f5dd8130f9cc10c78848cfaf');
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 600px;
+   position: relative;
+
+}
+
+.paraphaph {
+   font-size: 22px;
+   margin-left: 4%;
+   margin-right: 37%;
+   flex-wrap: wrap;
+   font-weight: bold;
+}
+
+.decouvirbtn {
+   margin-left: 34%;
+}
+
+.carousel h1 p {
+   margin-bottom: 25%;
+   color: rgb(53, 41, 41);
+   font-size: 35px;
+   margin-left: 3%;
+}
+
+h3 {
+   text-align: center;
+   font-size: 24px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   padding: 3%;
+}
+
+.recherInput {
+   width: 80%;
+   margin: 14px auto;
+   border: 1px solid rgb(51, 47, 47);
+}
+
+.card {
+   width: 21%;
+   margin: 3%;
+}
+
+.listcard {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.cardsvip {
+   display: flex;
+   justify-content: space-between;
+   width: 24%;
+   flex-wrap: wrap;
+}
+
+/**************Overlow card********/
+.addproduct {
+
+   text-align: center;
+   font-size: 1.8rem;
+   background-color: rgb(62, 0, 14);
+   padding-top: 12.8rem;
+   color: white;
+   cursor: pointer;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   opacity: 0;
+   height: 100%;
+}
+
+
+.card:hover .addproduct {
+   opacity: .6;
+}
+
+.addproduct span {
+   padding-right: 1rem;
+   margin: 3%;
+   font-size: 32px;
+   border-radius: 50px;
+
+}
+
+.addproduct span {
+   padding-right: 1rem;
+
+}
+
+.star {
+   color: gold;
+   text-align: center;
+   font-size: 20px;
+
+
+}
+
+
+
+.table {
+   margin: 5% auto;
+
+}
+
+table img {
+   margin-top: 4%;
+   width: 120px;
+   height: 120px;
+   text-align: center;
+}
+
+.clear {
+   display: flex;
+   justify-content: space-around;
+
+}
+
+/*****************form creatComp**********************/
+
+.creatcompt {
+   padding-top: 3%;
+   background-color: white;
+   width: 1000px;
+   margin: 2% auto;
+   text-align: center;
+   border-radius: 18px;
+}
+
+.allinput {
+   padding: 30px;
+
+}
+
+.iconCreatCompt {
+
+   font-size: 42px;
+   margin-right: 12px;
+}
+
+.allinput input {
+   padding: 8px;
+   width: 47%;
+   background-color: #eaeaea;
+   padding: 10px;
+   font-weight: bold;
+}
+
+.submitinfomation {
+   text-align: center;
+   padding-bottom: 5%;
+
+}
+
+.submitinfomation input {
+   padding: 8px;
+   width: 170px;
+   background-color: rgb(16, 29, 174);
+   color: black;
+   border-radius: 18px;
+   color: white;
+
+}
+
+/*****************login**********************/
+.login {
+   padding-top: 4%;
+   background-color: #bfb1c2;
+   width: 500px;
+   margin: 6% auto;
+   text-align: center;
+   padding-bottom: 3%;
+   border-radius: 18px;
+}
+
+.inputone {
+   display: flex;
+   align-items: center;
+}
+
+.inputone input {
+   width: 90%;
+   padding: 4%;
+   margin: 4%;
+   font-weight: bold;
+}
+
+.sumbit input {
+   width: 52%;
+   padding: 5px;
+   background-color: blue;
+   margin-left: 3%;
+   border-radius: 18px;
+   padding: 9px;
+}
+
+/**********************partie femmes***********************/
+/* .mainAddProd{
+   display: flex;
+   margin-block: 2rem;
+   align-items: flex-start;
+   justify-content: space-between;
+   width: 80%;
+   margin-inline:auto ;
+} */
+ .Addprod{
+   display: flex;
+   justify-content: space-evenly;
+   margin-top: 5%;
+ }
+.listProdAdd {
+   flex-basis: 90%;
+   margin: 5% auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+/* .cardAddProd{
+   flex-basis: 30%;
+   margin-bottom: 1rem;
+} */
+.btnAddProd {
+   flex-basis: 20%;
+}
+
+.form-control {
+   margin-bottom: 1rem;
+}
+
+.titreadd {
+   margin-left: 31%;
+}
+
+.filecss {
+   border: 1px solid black;
+}
+
+.btnsignup {
+   background-color: blue;
+   color: white;
+   font-weight: bold;
+   padding: 10px;
+   width: 22%;
+}
+.aboutas{
+   width: 88%;
+   display: flex;
+   justify-content: space-between;
+   margin: 5% auto;
+   text-align: center;
+}
+.aboutas article {
+   flex-basis: 23%;
+}
+.aboutas article img {
+   width: 120px;
+   height: 100px;
+   border-radius: 50%;
+   margin-block: 5%;
+}
+.aboutas article h5 {
+   color: rgb(203, 38, 16);
+   font-size: 22px;
+   margin-bottom: 4%;
+}
+.aboutas article a{
+   /* text-decoration: none; */
+   color: rgb(214, 97, 13);
+   font-weight: bold;
+}
+/* ******************************details************************************* */
+/* .container-dtails{
+   width: 90%;
+   margin: 5% auto;
+   background-color: #626262;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************footer*************************************/
+.footer {
+   background-color: rgb(57, 55, 55);
+   display: flex;
+   justify-content: space-evenly;
+   padding: 8%;
+   margin-top: 5%;
+}
+
+.footer h2 {
+   color: white;
+}
+
+.footer ul {
+   color: blanchedalmond;
+}
+
+.footer li {
+   list-style: none;
+   font-size: 16px;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 5px;
+}
+
+.sosialmedia {
+   border-radius: 50px;
+   padding: 5%;
+   color: white;
+
+}
