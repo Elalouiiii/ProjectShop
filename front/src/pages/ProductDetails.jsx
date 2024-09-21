@@ -24,7 +24,7 @@ export default function ProductDetails() {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await fetch(`http://localhost:5555/${id}`);
+                const response = await fetch(`http://localhost:5555/product/${id}`);
                 if (!response.ok) {
                     throw new Error('Product not found');
                 }
