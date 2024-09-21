@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Header from '../components/Header'
-import {  getProduct, data } from '../store/featureadd/shopSliceadd';
+import { getProduct, data } from '../store/featureadd/shopSliceadd';
 import { useDispatch, useSelector } from 'react-redux';
 
 import axios from 'axios';
@@ -33,9 +33,9 @@ export default function ProductDetails() {
             } catch (error) { setError(error.message); }
         };
         fetchProduct();
-    }, [id]); 
+    }, [id]);
 
-    
+
 
 
     return (
@@ -51,12 +51,15 @@ export default function ProductDetails() {
                         <h4 className='text-uppercase text-blac-50'>
                             {product.category}
                         </h4>
-                        <h1 className='display-5'>{product.name}</h1>
 
-                        <h3 className='display-6 fw-bold my-4'>
-                            $ {product.price}
-                        </h3>
-                        <p className='lead'>{product.description}</p>
+                        <p>
+                            <h1 className='display-5'>{product.name}</h1>
+                            <i className='fa fa-star text-warning'></i> <i className='fa fa-star text-warning'></i> <i className='fa fa-star text-warning'></i> <i className='fa fa-star text-warning'></i> <i className='fa fa-star text-warning'></i>
+                        </p>
+
+                        <span className='display-4 fw-bold my-2'>Last Price  : {product.price} $</span>
+                       
+                         <p className='lead'>{product.discription}</p> 
                         <button className='btn btn-outline-dark px-4 py-2'>Add to Cart </button>
 
                     </div>

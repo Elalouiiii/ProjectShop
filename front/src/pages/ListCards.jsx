@@ -72,21 +72,19 @@ export default function ListCards() {
                                     src={'http://localhost:5555/uploads/' + item.photo}
 
                                 />
-                                {/* <Card.Img variant="top" style={{ widows: '250px', height: '250px' }} src={item.photo} /> */}
                                 <Card.Body>
                                     <Card.Title>
                                         <h4 style={{ textAlign: 'center' }}>{item.name}</h4>
                                     </Card.Title>
                                     <Card.Text>
-                                        {/* <p>  {item.contenu.substring(1, 40)}  </p> */}
                                         <p style={{textAlign:'center'}}>{item.category}</p>
-                                        <span>
-                                        {item.description}
-                                        </span>
+                                       
                                         <p>{item.discription.substring(0,45)}</p>
                                     </Card.Text>
-                                    <p className='price' style={{fontWeight:'bold',textAlign:'center'}}> {item.price} $ </p>
-                                    {item.description} 
+                                    <p className='price' style={{fontWeight:'bold',textAlign:'center'}}> {item.price} $ 
+                                        
+                                    </p>
+                                    
                                 </Card.Body>
                                 <p className='star'>
                                     <FaStar /> <FaStar /><FaStar /><FaStar /><FaStarHalfAlt />
