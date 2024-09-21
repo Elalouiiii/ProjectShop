@@ -8,7 +8,7 @@ import directeurnord from '../images/resposable3.jpg'
 
 export default function AboutAs() {
   return (
-    <div style={{  backgroundColor: '#b7aeb8'}}>
+    <div style={{  backgroundColor: '#ebebeb'}}>
       <Header />
       <div><h1 className='display-6 fw-bolder text-center mt-5' variant="info">--- Notre Points de vente ---</h1></div>
       <hr />

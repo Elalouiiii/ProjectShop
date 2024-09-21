@@ -83,7 +83,7 @@ export default function ListCards() {
                                         <span>
                                         {item.description}
                                         </span>
-                                        {/* <p>{item.discription}</p> */}
+                                        <p>{item.discription.substring(0,45)}</p>
                                     </Card.Text>
                                     <p className='price' style={{fontWeight:'bold',textAlign:'center'}}> {item.price} $ </p>
                                     {item.description} 

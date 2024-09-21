@@ -29,7 +29,7 @@ const login = async (req, res) => {
                     if (response) {
                         const token = jwt.sign({ email: user.email, role: user.role }, "jwk-scret-key", { expiresIn: "1d" })
                         res.cookie("token", token)
-                       return res.json({Status:"success",role:user.role})
+                        return res.json({ Status: "success", role: user.role })
                     } else {
                         res.json('the password is incorrect')
                     }
@@ -40,7 +40,7 @@ const login = async (req, res) => {
             }
 
         })
-    }
+}
 
 
 
@@ -52,7 +52,7 @@ const login = async (req, res) => {
 
 
 const getProduct = async (req, res) => {
-    
+
     const Fashions = await Fashion.find();
     res.json(Fashions)
 
@@ -77,7 +77,7 @@ const addProduct = async (req, res) => {
 const deleteProduct = async (req, res) => {
     console.log(req.params.index);
 
- const  fashions = await Fashion.findByIdAndDelete(req.params.index)
+    const fashions = await Fashion.findByIdAndDelete(req.params.index)
 
     res.json(fashions)
 
@@ -98,64 +98,22 @@ const modifProduct = async (req, res) => {
 
 
 
-   const fashion = await Fashion.findByIdAndUpdate(req.params.index, data, { new: true })
+    const fashion = await Fashion.findByIdAndUpdate(req.params.index, data, { new: true })
     res.json(fashion)
     // res.redirect('/')
 }
 
+const detailsProduct = async (req, res) => {
 
-
-const getProductVip = async (req, res) => {
-    
-    const fashionsVip = await Vipprod.find()
-    res.json(fashionsVip)
-
-
-}
-const addProductVip = async (req, res) => {
-
-
-    const fashionsVip = await Vipprod.create({
-        ...req.body,
-        photo: req.file.filename
-
-    })
-
-    res.json(fashionsVip)
+    const { id } = req.params;
+    try {
+        const product = await Fashion.findById(id);
+        if (!product) { 
+            return res.status(404).json({ message: 'Product not found' }); }
+           res.json(product);
+    } catch (error) { res.status(500).json({ message: 'Server error' }); }
 }
 
 
+export { getProduct, addProduct, deleteProduct, modifProduct, authcontrollers, login, detailsProduct }
 
-
-
-const deleteProductVip = async (req, res) => {
-    console.log(req.params.index);
-
- const  fashionsVip = await Vipprod.findByIdAndDelete(req.params.index)
-
-    res.json(fashionsVip)
-
-}
-
-const modifProductVip = async (req, res) => {
-    console.log(req.params.index);
-    let data
-    if (req.file) {
-        console.log(req.file);
-        const photo = req.file.filename
-        data = { ...req.body, photo }
-    } else {
-        data = req.body
-    }
-
-
-
-
-
-   const fashionsVip = await Vipprod.findByIdAndUpdate(req.params.index, data, { new: true })
-    res.json(fashionsVip)
-    // res.redirect('/')
-}
-
-export { getProduct, addProduct, deleteProduct, modifProduct, authcontrollers, login,getProductVip,addProductVip,deleteProductVip,modifProductVip }
-// ,,addProduct, , modifProduct 

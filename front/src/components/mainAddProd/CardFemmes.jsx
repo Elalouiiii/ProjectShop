@@ -92,8 +92,8 @@ export default function CardFemmes({ item }) {
             <Card.Title>{item.name}</Card.Title>
             <Card.Text>  {item.category}</Card.Text>
 
-            <Card.Text>{item.description}  </Card.Text>
-            <Card.Text>{item.price}</Card.Text>
+            <Card.Text>{item.discription.substring(0,45)}</Card.Text>
+            <Card.Text style={{fontWeight:'bold'}}>{item.price} $</Card.Text>
             <div className="manage">
               <div>
                 <MdEdit onClick={showOnitem} style={{cursor:'pointer'}} />

@@ -21,19 +21,19 @@ export default function ProductDetails() {
     const [product, setProduct] = useState([])
     const [error, setError] = useState(null);
 
-    useEffect(() => { 
-        const getProductById = () => {
-       
-        const foundProduct = Articles.find((product) => product._id === id); 
-        console.log(Articles)
-
-        if (foundProduct) { 
-            setProduct(foundProduct); 
-        } else { 
-            setError('Product not found'); } }; 
-            getProductById();
-            
-         }, [id]); 
+    useEffect(() => {
+        const fetchProduct = async () => {
+            try {
+                const response = await fetch(`http://localhost:5555/${id}`);
+                if (!response.ok) {
+                    throw new Error('Product not found');
+                }
+                const data = await response.json();
+                setProduct(data);
+            } catch (error) { setError(error.message); }
+        };
+        fetchProduct();
+    }, [id]); 
 
     
 
@@ -49,14 +49,14 @@ export default function ProductDetails() {
                     </div>
                     <div className='col-md-6'>
                         <h4 className='text-uppercase text-blac-50'>
-                            {product.gender}
+                            {product.category}
                         </h4>
                         <h1 className='display-5'>{product.name}</h1>
 
                         <h3 className='display-6 fw-bold my-4'>
                             $ {product.price}
                         </h3>
-                        <p className='lead'>{product.color}</p>
+                        <p className='lead'>{product.description}</p>
                         <button className='btn btn-outline-dark px-4 py-2'>Add to Cart </button>
 
                     </div>
